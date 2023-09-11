@@ -73,14 +73,14 @@
     <IntDir>.\bin\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
-    <TargetName>FileTest</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>.\bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
-    <TargetName>FileTest</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -88,14 +88,14 @@
     <IntDir>.\bin\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
-    <TargetName>FileTest</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>.\bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>.\bin\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
-    <TargetName>FileTest</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -118,7 +118,7 @@
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/PDBALTPATH:%_PDB% /Brepro %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
       <Command />
@@ -148,7 +148,7 @@
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX64</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/PDBALTPATH:%_PDB% /Brepro %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
       <Command />
@@ -173,7 +173,7 @@
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/PDBALTPATH:%_PDB% /Brepro %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
@@ -201,7 +201,7 @@
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <TargetMachine>MachineX64</TargetMachine>
-      <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/PDBALTPATH:%_PDB% /Brepro %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
